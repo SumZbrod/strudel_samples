@@ -1,0 +1,21 @@
+setcpm(40)
+stack(
+  // Melody
+  stack(
+      // start
+      stack(
+        n("4 [2 5] 6@2")
+          .clip(".5 1")
+          .mask("<1!2 0!4>"),
+      // base
+        n("4 <2 7!3> <5 <[<0 2> 5] 5>> <<6 0> 2>")
+          .mask("<0!2 1!4>")
+          .clip("<.75!3 1>"),
+      ).room(".1")
+        .s("gm_epiano1").gain(".8"),
+    // Bass
+      n("<0!5 -> <2!5 [0 2]> 4 <2!5 ->".add(-7)).room("<1. .2>").lpf(1000).s("gm_epiano2").clip(2)
+  ).scale("<F3:major A3:major!2>/2"),
+)
+
+
