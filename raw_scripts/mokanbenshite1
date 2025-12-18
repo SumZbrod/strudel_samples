@@ -1,0 +1,6 @@
+samples({
+mokan: 'anime/mokan.mp3',
+}, 'https://raw.githubusercontent.com/SumZbrod/strudel_samples/master/');
+
+setcpm(120)
+s("mokan").slice(4, "<0 1 2 3>")
