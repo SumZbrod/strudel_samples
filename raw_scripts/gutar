@@ -1,12 +1,5 @@
 setcpm(30)
 stack(
-  n(`<
-    [0 1 0 2]
-    [0 1 2 1]
-    [0 1 0 2]
-    [0 [0 1] 2@2]
-  >`).lpf(1000).adsr(".1:1:.8:.1").scale("C4:major").s('gm_overdriven_guitar'),
-
   s("bd!7 [lt sd]").gain("<.1 .5>*8").lpf(1000),
 
   n(`<
@@ -15,4 +8,5 @@ stack(
     [2 6 8 4]
     [4 [3 7] 4 6]
   >`).scale("<D4:major B4:minor>/4").s("piano").fast(2),
+  n("[<1 0> <2 <2 4>>]*4").s("piano").gain(1).fm(4).fmattack(".5 .1").vowel("i").room(3)
 )
